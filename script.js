@@ -64,7 +64,13 @@ $(function() {
             var countdownText = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
             countdownElem.text(countdownText);
         }, 1000);
-    
+
+
+        // Display today's date and the number of days until graduation
+    var today = new Date();
+    var daysUntilTrip = Math.floor((tripDate - today) / (1000 * 60 * 60 * 24));
+    var dateElem = $("#date");
+    dateElem.text("Today is " + today.toDateString() + ", " + daysUntilTrip + " days until Friday, May 17 2024.");
 
 
 });
